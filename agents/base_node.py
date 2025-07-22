@@ -1,6 +1,10 @@
 from abc import ABC, abstractmethod
 
 
+
+from typing import Any,Dict
+
+
 class BaseNode(ABC):
     """
     모든 노드의 기본 클래스입니다. LangGraph Workflow에서 사용되는 노드의 기본 구조를 정의합니다.
@@ -75,3 +79,9 @@ class BaseNode(ABC):
             dict: execute 메서드의 결과
         """
         return self.execute(state)
+
+    
+    # In BaseNode class
+    async def execute(self, state: Dict[str, Any]) -> Dict[str, Any]:
+        raise NotImplementedError
+

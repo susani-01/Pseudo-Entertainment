@@ -48,3 +48,10 @@ class BaseWorkflow(ABC):
             CompiledStateGraph: build 메서드의 결과
         """
         return self.build()
+
+    
+    async def ainvoke(self,input_state: dict) -> dict:
+        if self._compiled_workflow is None:
+            self._compiled_workflow = self.build()
+        return await self._compiled_workflow.ainvoke(input_state)
+

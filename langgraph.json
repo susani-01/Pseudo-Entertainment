@@ -1,10 +1,15 @@
 {
   "dependencies": ["."],
   "graphs": {
+
     "main": "./agents/workflow.py:main_workflow",
     "text": "./agents/text/workflow.py:text_workflow",
     "music": "./agents/music/workflow.py:music_workflow",
     "image": "./agents/image/workflow.py:image_workflow"
+
+
+    "music": "./agents/music/workflow.py:music_workflow"
+
   },
   "env": ".env"
 }

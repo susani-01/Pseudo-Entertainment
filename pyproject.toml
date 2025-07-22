@@ -3,7 +3,11 @@ name = "pseudo-entertainment"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
+
 requires-python = ">=3.13"
+
+requires-python = ">=3.13,<4.0"
+
 dependencies = [
     "langchain>=0.3.23",
     "langgraph>=0.3.27",
@@ -25,3 +29,4 @@ exclude = ["**/__pycache__/*", "**/node_modules/*", ".venv", "**/.venv"]
 
 [tool.uv.workspace]
 members = ["agents/text", "agents/music", "agents/image"]
+
